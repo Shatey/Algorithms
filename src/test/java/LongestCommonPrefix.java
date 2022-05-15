@@ -15,15 +15,44 @@ public class LongestCommonPrefix {
         assertEquals("a", longestCommonPrefix(third));
         String[] fourth = {"reflower", "flow", "flight"};
         assertEquals("", longestCommonPrefix(fourth));
-
     }
 
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 1) {
             return strs[0];
         }
+        String res = strs[0];
+        var add = true;
+        var charPos = 0;
+        var minLen = getMinLen(strs);
+        while (add && charPos < minLen) {
+            for (var str: strs) {
+                add = res.charAt(charPos) == str.charAt(charPos);
+                if (!add) {
+                    charPos--;
+                    break;
+                }
+            }
+            charPos++;
+        }
+        res = res.substring(0, charPos);
+        return res;
+    }
+
+    private int getMinLen(String[] strs) {
+        var minLen = strs[0].length();
+        for (var i = 1; i < strs.length; i++) {
+            minLen = Math.min(minLen, strs[i].length());
+        }
+        return minLen;
+    }
+
+    public String longestCommonPrefixp(String[] strs) {
+        if (strs.length == 1) {
+            return strs[0];
+        }
         String res = null;
-        for (var str: strs) {
+        for (var str : strs) {
             if (res == null) {
                 res = str;
                 continue;
