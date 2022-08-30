@@ -11,7 +11,7 @@ public class LongestCommonPrefix {
         var charPos = 0;
         var minLen = getMinLen(strs);
         while (add && charPos < minLen) {
-            for (var str: strs) {
+            for (var str : strs) {
                 add = res.charAt(charPos) == str.charAt(charPos);
                 if (!add) {
                     charPos--;

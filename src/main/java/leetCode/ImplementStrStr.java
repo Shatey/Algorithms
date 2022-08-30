@@ -9,7 +9,7 @@ public class ImplementStrStr {
             return -1;
         int res = 0;
         var found = false;
-        for (int h = 0, n = 0; h < haystack.length() && n < needle.length();) {
+        for (int h = 0, n = 0; h < haystack.length() && n < needle.length(); ) {
             if (haystack.charAt(h) == needle.charAt(n)) {
                 n++;
                 h++;

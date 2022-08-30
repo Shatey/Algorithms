@@ -58,7 +58,7 @@ public class GoogleTask2 {
         var lastMinionPos = getLastMinionPos(charArray);
         for (int i = 0; i < lastMinionPos; i++) {
             if (charArray[i] == '>') {
-                for (int k = i+1; k <= lastMinionPos; k++) {
+                for (int k = i + 1; k <= lastMinionPos; k++) {
                     if (charArray[k] == '<') {
                         saluteCount += 2;
                     }

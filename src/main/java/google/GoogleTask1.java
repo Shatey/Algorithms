@@ -50,15 +50,15 @@ public class GoogleTask1 {
             return data;
         }
         int max = 0;
-        for (int i: data) {
-            max = Math.max(max, i)+1;
+        for (int i : data) {
+            max = Math.max(max, i) + 1;
         }
         int[] dup = new int[max];
         int length = 0;
-        for (int i: data) {
+        for (int i : data) {
             dup[i] = dup[i] + 1;
         }
-        for (int i: data) {
+        for (int i : data) {
             if (dup[i] <= n) {
                 length++;
             }

@@ -52,7 +52,7 @@ public class GoogleTask6 {
     public static int solution(int[] l) {
         int res = 0;
         int pos = 0;
-        for (int i = 0; i < l.length -2; i++) {
+        for (int i = 0; i < l.length - 2; i++) {
             for (int j = i + 1; j < l.length - 1; j++) {
                 if (l[j] % l[i] == 0) {
                     pos++;

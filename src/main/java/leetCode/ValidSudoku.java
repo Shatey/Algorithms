@@ -22,11 +22,11 @@ public class ValidSudoku {
                 if (num == '.') {
                     continue;
                 }
-                var numericValue  = Character.getNumericValue(num);
-                if (set[numericValue-1] != 0) {
+                var numericValue = Character.getNumericValue(num);
+                if (set[numericValue - 1] != 0) {
                     return false;
                 }
-                set[numericValue-1] = numericValue;
+                set[numericValue - 1] = numericValue;
             }
         }
         return true;
@@ -39,11 +39,11 @@ public class ValidSudoku {
                 if (num[i] == '.') {
                     continue;
                 }
-                var numericValue  = Character.getNumericValue(num[i]);
-                if (set[numericValue-1] != 0) {
+                var numericValue = Character.getNumericValue(num[i]);
+                if (set[numericValue - 1] != 0) {
                     return false;
                 }
-                set[numericValue-1] = numericValue;
+                set[numericValue - 1] = numericValue;
             }
         }
         return true;
@@ -56,11 +56,11 @@ public class ValidSudoku {
         int[] set = new int[9];
         for (byte i = 0, j = 0; i < 9 && j < 9; i++) {
             if (board[j][i] != '.') {
-                var numericValue  = Character.getNumericValue(board[j][i]);
-                if (set[numericValue-1] != 0) {
+                var numericValue = Character.getNumericValue(board[j][i]);
+                if (set[numericValue - 1] != 0) {
                     return false;
                 }
-                set[numericValue-1] = numericValue;
+                set[numericValue - 1] = numericValue;
             }
 
             if (i == iLimit && j < jLimit) {

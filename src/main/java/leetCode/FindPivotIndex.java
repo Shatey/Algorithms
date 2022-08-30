@@ -8,7 +8,7 @@ public class FindPivotIndex {
         if (nums.length > 0) {
             var leftSum = 0;
             var rightSum = 0;
-            for (var num: nums) {
+            for (var num : nums) {
                 rightSum += num;
             }
             for (int i = 0; i < nums.length; i++) {

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GoogleTask2Test {
     @Test
-    void test () {
+    void test() {
         assertEquals(4, GoogleTask2.solution("<<>><"));
         assertEquals(2, GoogleTask2.solution(">----<"));
         assertEquals(10, GoogleTask2.solution("--->-><-><-->-"));

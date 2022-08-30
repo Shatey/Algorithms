@@ -95,7 +95,7 @@ public class GoogleTask4 {
         [0, 3, 2, 9, 14]
      */
     @Test
-    void test(){
+    void test() {
 
     }
 

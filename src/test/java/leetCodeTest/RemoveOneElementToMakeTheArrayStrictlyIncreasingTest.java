@@ -14,7 +14,7 @@ public class RemoveOneElementToMakeTheArrayStrictlyIncreasingTest {
         assertFalse(RemoveOneElementToMakeTheArrayStrictlyIncreasing.canBeIncreasing(new int[]{2, 3, 1, 2}));
         assertFalse(RemoveOneElementToMakeTheArrayStrictlyIncreasing.canBeIncreasing(new int[]{1, 1, 1}));
         assertTrue(RemoveOneElementToMakeTheArrayStrictlyIncreasing.canBeIncreasing(new int[]{1, 1}));
-        assertTrue(RemoveOneElementToMakeTheArrayStrictlyIncreasing.canBeIncreasing(new int[]{105,924,32,968}));
-        assertFalse(RemoveOneElementToMakeTheArrayStrictlyIncreasing.canBeIncreasing(new int[]{541,783,433,744}));
+        assertTrue(RemoveOneElementToMakeTheArrayStrictlyIncreasing.canBeIncreasing(new int[]{105, 924, 32, 968}));
+        assertFalse(RemoveOneElementToMakeTheArrayStrictlyIncreasing.canBeIncreasing(new int[]{541, 783, 433, 744}));
     }
 }

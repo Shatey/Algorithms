@@ -122,6 +122,7 @@ Output:
     }
 
     static Map<BigInteger, Integer> pathList = new HashMap<>();
+
     private static int solution(String s) {
         var number = new BigInteger(s);
         if (pathList.containsKey(number)) {
@@ -144,7 +145,7 @@ Output:
 
 
     private static int solutionLeetCode(String s) {
-        long number =Long.parseLong(s,2);
+        long number = Long.parseLong(s, 2);
         short res = 0;
         while (number != 1) {
             if (number % 2 == 0) {
@@ -158,37 +159,39 @@ Output:
     }
 
     public static int solutionNew(String x) {
-        globalMin =Integer.MAX_VALUE;
+        globalMin = Integer.MAX_VALUE;
         BigInteger number = new BigInteger(x);
         return shortestPath(number, 0);
     }
 
     static int globalMin;
+
     /**
      * recursive solution with prunning
+     *
      * @param number
      * @return
      */
-    public static int shortestPath(BigInteger number, int alreadyPassed){
-        if(number.compareTo(BigInteger.ZERO) <= 0){
+    public static int shortestPath(BigInteger number, int alreadyPassed) {
+        if (number.compareTo(BigInteger.ZERO) <= 0) {
             return Integer.MAX_VALUE;
         }
 
-        if (number.equals(BigInteger.ONE)){
+        if (number.equals(BigInteger.ONE)) {
             return 1;
         }
 
         int stepsNumber = 0;
-        while (!number.testBit(0)){
+        while (!number.testBit(0)) {
             stepsNumber++;
-            if(stepsNumber + alreadyPassed > globalMin ){
+            if (stepsNumber + alreadyPassed > globalMin) {
                 System.out.println("Prunning for number " + number);
                 return Integer.MAX_VALUE;
             }
             number = number.shiftRight(1);
         }
 
-        if (number.equals(BigInteger.ONE)){
+        if (number.equals(BigInteger.ONE)) {
             globalMin = alreadyPassed + stepsNumber;
             return alreadyPassed + stepsNumber;
         }

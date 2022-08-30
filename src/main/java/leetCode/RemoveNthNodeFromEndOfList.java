@@ -13,7 +13,7 @@ public class RemoveNthNodeFromEndOfList {
             currentNode = currentNode.next;
         }
         var targetPos = list.size() - n;
-        if (targetPos == 0 ) {
+        if (targetPos == 0) {
             head = head.next == null ? null : head.next;
         } else if (targetPos == list.size() - 1) {
             var prev = list.get(targetPos - 1);

@@ -1,9 +1,5 @@
 package googleTest;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class GoogleTask8 {
 //    Bringing a Gun to a Trainer Fight
 //    =================================

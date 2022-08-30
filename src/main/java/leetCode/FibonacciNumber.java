@@ -5,10 +5,10 @@ public class FibonacciNumber {
         if (n == 0) {
             return 0;
         }
-        n = n-2;
+        n = n - 2;
         var prev = 0;
         var next = 1;
-        for (;n >= 0; n--) {
+        for (; n >= 0; n--) {
             var tmp = next;
             next += prev;
             prev = tmp;

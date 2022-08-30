@@ -1,7 +1,5 @@
 package googleTest;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GoogleTask5 {
@@ -93,17 +91,17 @@ Output:
         var i = 0;
         var j = 0;
         while (!isSolved) {
-                if (!isWallRemoved) {
-                    if (j + 1 < map[0].length && map[i][j + 1] == 1) {
-                        if (j + 2 < map[0].length && map[i][j + 2] == 0 /*||
+            if (!isWallRemoved) {
+                if (j + 1 < map[0].length && map[i][j + 1] == 1) {
+                    if (j + 2 < map[0].length && map[i][j + 2] == 0 /*||
                                 i + 1 < map.length && map[i + 1][j + 1] == 0 ||
                                 i - 1 >= 0 && map[i - 1][j + 1] == 0*/) {
-                            prevPos[0] = i;
-                            prevPos[1] = j;
-                            j += 1;
-                            isWallRemoved = true;
-                        }
-                    } /*else if (j - 1 >= 0 && map[i][j - 1] == 1) {
+                        prevPos[0] = i;
+                        prevPos[1] = j;
+                        j += 1;
+                        isWallRemoved = true;
+                    }
+                } /*else if (j - 1 >= 0 && map[i][j - 1] == 1) {
                         if (j - 2 >= 0 && map[i][j - 2] == 0 ||
                                 i + 1 < map.length && map[i + 1][j - 1] == 0 ||
                                 i - 1 >= 0 && map[i - 1][j - 1] == 0) {
@@ -113,32 +111,32 @@ Output:
                             isWallRemoved = true;
                         }
                     }*/ else if (i + 1 < map.length && map[i + 1][j] == 1) {
-                        if (i + 2 < map.length && map[i + 2][j] == 0/* ||
+                    if (i + 2 < map.length && map[i + 2][j] == 0/* ||
                                 j + 1 < map[0].length && map[i + 1][j + 1] == 0 ||
                                 j - 1 >= 0 && map[i + 1][j - 1] == 0*/) {
-                            prevPos[0] = i;
-                            prevPos[1] = j;
-                            i += 1;
-                            isWallRemoved = true;
-                        }
-                    } else if (i - 1 >= 0 && map[i - 1][j] == 1) {
-                        if (i - 2 >= 0 && map[i - 2][j] == 0 ||
-                                j + 1 < map[0].length && map[i - 1][j + 1] == 0 ||
-                                j - 1 >= 0 && map[i - 1][j - 1] == 0) {
-                            prevPos[0] = i;
-                            prevPos[1] = j;
-                            i -= 1;
-                            isWallRemoved = true;
-                        }
+                        prevPos[0] = i;
+                        prevPos[1] = j;
+                        i += 1;
+                        isWallRemoved = true;
                     }
-                    if (isWallRemoved) {
-                        removedWallPos[0] = i;
-                        removedWallPos[1] = j;
-                        i = map.length - 1;
-                        j = map[0].length - 1;
-                        length += 1;
+                } else if (i - 1 >= 0 && map[i - 1][j] == 1) {
+                    if (i - 2 >= 0 && map[i - 2][j] == 0 ||
+                            j + 1 < map[0].length && map[i - 1][j + 1] == 0 ||
+                            j - 1 >= 0 && map[i - 1][j - 1] == 0) {
+                        prevPos[0] = i;
+                        prevPos[1] = j;
+                        i -= 1;
+                        isWallRemoved = true;
                     }
                 }
+                if (isWallRemoved) {
+                    removedWallPos[0] = i;
+                    removedWallPos[1] = j;
+                    i = map.length - 1;
+                    j = map[0].length - 1;
+                    length += 1;
+                }
+            }
 //                if (i + 1 < map.length && map[i + 1][j] == 0 && i + 1 != prevPos[0]) {
 //                    prevPos[0] = i;
 //                    prevPos[1] = j;

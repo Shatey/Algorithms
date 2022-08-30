@@ -17,6 +17,6 @@ public class AmazonTask1Test {
 
     @Test
     void test2() {
-        assertEquals(2, AmazonTask1.generalizedGCD(5, new int[]{2,4,6,8,10}));
+        assertEquals(2, AmazonTask1.generalizedGCD(5, new int[]{2, 4, 6, 8, 10}));
     }
 }

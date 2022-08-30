@@ -3,8 +3,6 @@ package googleTest;
 import google.GoogleTask3;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class GoogleTask3Test {
